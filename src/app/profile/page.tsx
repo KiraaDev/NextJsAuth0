@@ -16,6 +16,7 @@ const ProfilePage: React.FC = () => {
                 <img src={user.picture || undefined} alt={user.name || undefined} className="rounded-full" />
                 <h2>{user.name}</h2>
                 <p>{user.email}</p>
+                <a href="/api/auth/logout">Logout</a>
             </div>
         )
     )
