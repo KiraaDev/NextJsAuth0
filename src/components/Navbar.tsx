@@ -30,11 +30,11 @@ export default function Navbar() {
         setMenuOpen(false);
     };
 
-    if(isLoading) return <Loader />
+    if (isLoading) return <Loader />
 
     return (
         <>
-            <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+            <div className="grid grid-rows-[10px_1fr_10px] items-center justify-items-center p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
                 <nav className="relative px-4 py-4 flex justify-between items-center w-full">
                     <a className="text-3xl font-bold leading-none" href="/">
                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -108,9 +108,14 @@ export default function Navbar() {
                             </DropdownMenu>
                             :
                             <>
-                                <Button variant={'default'} className="hidden lg:inline-block py-2 px-6 font-bold rounded-xl transition duration-200">
-                                    <a href="/api/auth/login">Sign In</a>
-                                </Button>
+                                <div className='hidden lg:flex lg:gap-5'>
+                                    <Button variant={'secondary'} className="py-2 px-6 font-bold rounded-xl transition duration-200">
+                                        <a href="/api/auth/signup">Sign Up</a>
+                                    </Button>
+                                    <Button variant={'default'} className="py-2 px-6 font-bold rounded-xl transition duration-200">
+                                        <a href="/api/auth/login">Sign In</a>
+                                    </Button>
+                                </div>
                             </>
                     }
 
@@ -172,13 +177,16 @@ export default function Navbar() {
                                 <p className=' text-center text-xs font-semibold'>{user.email}</p>
                                 :
                                 <div className=' flex justify-center items-center gap-2'>
+                                    <Button variant={'secondary'} className="py-2 px-6 font-bold rounded-xl transition duration-200">
+                                        <a href="/api/auth/signup">Sign Up</a>
+                                    </Button>   
                                     <Button variant={'default'} className="py-2 px-6 font-bold rounded-xl transition duration-200">
                                         <a href="/api/auth/login">Sign In</a>
                                     </Button>
                                 </div>
                             }
                             <p className="my-4 text-xs text-center text-gray-400">
-                          
+
                             </p>
                         </div>
                     </nav>
