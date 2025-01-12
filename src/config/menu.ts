@@ -16,11 +16,15 @@ export const mainMenu: NavItemWithChildren[] = [
         to: "/"
     },
     {
-        title: "About",
+        title: "About us",
         to: "/about"
     },
     {
         title: "Contact",
         to: "/contact"
+    },
+    {
+        title: "Jobs",
+        to: "/jobs"
     }
 ]
