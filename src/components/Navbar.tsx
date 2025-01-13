@@ -79,7 +79,7 @@ export default function Navbar() {
                     <ul className="hidden absolute top-1/2 gap-5 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
                         {mainMenu.map((menu, index) => (
                             <li key={index} className='select-none'>
-                                <a className={menu.to === location ? 'font-bold' : 'text-gray-900 hover:text-gray-500'} href={`${menu.to}`}>{menu.title}</a>
+                                <a className={menu.to === location ? 'font-bold' : 'text' } href={`${menu.to}`}>{menu.title}</a>
                             </li>
                         ))}
                     </ul>

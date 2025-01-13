@@ -16,8 +16,7 @@ export default function AboutPage() {
 
     return (
         <>
-            <Navbar />
-            <div className="container mx-auto px-4 py-8">
+            <div className="container mx-auto px-4 py-8 text">
                 <h1 className="text-4xl font-bold text-center mb-8">About NextHire</h1>
 
                 <section className="mb-12">
@@ -30,7 +29,7 @@ export default function AboutPage() {
                 <section className="mb-12">
                     <h2 className="text-2xl font-semibold mb-4">What We Offer</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <Card>
+                        <Card className=' bg-card-primary'>
                             <CardHeader>
                                 <CardTitle>For Job Seekers</CardTitle>
                                 <CardDescription>Find your next career opportunity</CardDescription>
@@ -44,7 +43,7 @@ export default function AboutPage() {
                                 </ul>
                             </CardContent>
                         </Card>
-                        <Card>
+                        <Card className='bg-card-primary'>
                             <CardHeader>
                                 <CardTitle>For Employers</CardTitle>
                                 <CardDescription>Find your ideal candidates</CardDescription>
